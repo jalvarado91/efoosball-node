@@ -4,6 +4,7 @@ var board2 = new five.Board();
 var Firebase = require("Firebase");
 
 var myFirebaseRef = new Firebase("https://burning-fire-6346.firebaseio.com/");
+var player = "player2";
 
 var epsilon = 2;
 
@@ -12,7 +13,7 @@ var d2 = 50;
 var d3 = 50;
 
 board.on("ready", function() {
-  var player = "player1";
+  var player = "player2";
 
   var proximity1 = new five.Proximity({
     controller: "HCSR04",
@@ -81,8 +82,6 @@ board.on("ready", function() {
 });
 
 board2.on("ready", function() {
-  var player = "player2";
-
   var proximity1 = new five.Proximity({
     controller: "HCSR04",
     pin: 7
